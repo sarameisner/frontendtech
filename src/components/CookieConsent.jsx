@@ -74,13 +74,17 @@ const CookieConsent = () => {
 
   return (
     <div style={styles.container}>
+      {/* her er knappen til at lukke pop-up'en - jeg har lavet en onClick som kalder funktionen handleClose */}
       <button style={styles.closeButton} onClick={handleClose}>
         ✕
       </button>
+      {/* indholdet i cookie pop-up'en */}
       <div style={styles.content}>
+        {/* cookie-ikonet henter jeg fra react icons biblioteket */}
         <FaCookieBite style={styles.cookieIcon} />
         <p style={styles.text}>We use cookies to improve your user experience.</p>
       </div>
+      {/* knappen der accepterer cookies og her kalder vi også på handleClose, så pop-up'en også lukkes */}
       <button style={styles.button} onClick={handleClose}>
         I like Cookies
       </button>
