@@ -6,6 +6,8 @@ import { useState } from "react";
 // her importerer jeg cookie ikonet fra reacts icon bibliotek, som vi installerede i undervisningen
 import { FaCookieBite } from "react-icons/fa";
 
+import CookieConsentCTA from "./CookieConsentCTA";
+
 // her laver jeg variablen for tilstanden
 const CookieConsent = () => {
   // her bruger jeg useState til at sørge for, at pop-up'en vises som standard
@@ -33,17 +35,24 @@ const CookieConsent = () => {
         <p className="flex-1 text-base m-0">We use cookies to improve your user experience.</p>
       </div>
 
-      {/* accepter cookies knappen og lukker fanen igen */}
-      <button className="bg-white text-gray-900 border-none py-2 px-5 rounded-lg cursor-pointer text-base self-center" onClick={handleClose}>
-        I like Cookies
-      </button>
+      {/* accepter cookies knappen */}
+      <CookieConsentCTA ctatext="I like Cookies" />
     </div>
   );
 };
 
 export default CookieConsent;
 
-// FØR TAILWIND
+// FØR TAILWIND OG PROPS
+
+{
+  /* FØR VI LAVET KNAPPEN TIL EN PROP */
+}
+{
+  /* <button className="bg-white text-gray-900 border-none py-2 px-5 rounded-lg cursor-pointer text-base self-center" onClick={handleClose}>
+        I like Cookies
+      </button> */
+}
 
 // // hvis jeg vil have min styling direkte her i komponentet, så skal jeg skrive i camelCase, hvis det er et opdelt ord - man kan ikke skrive bindestreger i variabler
 // const styles = {
